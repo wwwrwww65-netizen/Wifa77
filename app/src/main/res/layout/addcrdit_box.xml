@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/wifiname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity=""
+            android:padding="5.20dp"
+            android:background="@color/wifacolor"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/vt_wifiname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="شحن رصيد الحساب بكرت"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/line_wifiname"
+        android:layout_width="match_parent"
+        android:layout_height="0.80dp"
+        android:layout_marginTop="0.00dp"
+        android:layout_marginBottom="15.00dp"
+        android:background="@color/wifacolor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="13.60dp"
+        android:paddingRight="13.60dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/tx_1"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10.00dp"
+            android:textColor="@color/input_register_bg"
+            android:text="ادخل بيانات الكرت الجديد ليتم اضافة الرصيد إلى رصيد حسابك السابق"/>
+        <LinearLayout
+            android:id="@+id/Linearlay_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+            <pl.droidsonroids.gif.GifTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/loading_blue"
+                android:id="@+id/image_loading" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/ed_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18.40dp"
+            android:background="@drawable/custom_spinner_background"
+            android:layout_alignParentRight="true"
+            android:hint="اسم المستخدم"
+            android:inputType="text"
+            android:padding="16.80dp"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/colorSecondaryText" />
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.20dp"
+            android:background="@drawable/custom_spinner_background"
+            android:hint="كلمة المرور"
+            android:inputType="text"
+            android:padding="16.80dp"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/colorSecondaryText" />
+
+        <!-- Login Button -->
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19.20dp"
+        android:layout_marginLeft="19.20dp"
+        android:layout_marginRight="19.20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="خـــروج"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="10.80dp"
+            android:layout_marginRight="5.20dp"
+            android:background="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.80dp"
+            android:layout_weight="1"
+            android:text="حــفــظ"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="5.20dp"
+            android:background="@color/wifacolor2"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

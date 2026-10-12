@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <VideoView android:id="@+id/videoView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </VideoView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/counter_txt"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="30"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@style/Light"
+                android:background="@drawable/circletimer"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"/>
+            <ImageView
+                android:id="@+id/viewimpty"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:visibility="visible"
+                android:gravity="center"
+                android:layout_weight="1"
+                tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/error"
+                android:layout_weight="1"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ads_click_pg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="زيارة الموقع"
+            android:textSize="23sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginRight="35.20dp"
+            android:visibility="gone"
+            android:layout_marginLeft="35.20dp"
+            android:background="@color/colorAccent"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

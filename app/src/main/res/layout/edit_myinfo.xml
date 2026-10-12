@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/wifiname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity=""
+            android:padding="5.20dp"
+            android:background="@color/wifacolor"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/vt_headname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="تعديل البيانات"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/line_wifiname"
+        android:layout_width="match_parent"
+        android:layout_height="0.80dp"
+        android:layout_marginTop="0.00dp"
+        android:layout_marginBottom="15.00dp"
+        android:background="@color/wifacolor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="13.60dp"
+        android:paddingRight="13.60dp">
+        <EditText
+            android:id="@+id/nameed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18.40dp"
+            android:background="@drawable/custom_spinner_background"
+            android:layout_alignParentRight="true"
+            android:hint="الاسم : حقيقي او مستعار"
+            android:inputType="text"
+            android:padding="13dp"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/colorSecondaryText" />
+
+        <EditText
+            android:id="@+id/phoneed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_spinner_background"
+            android:hint="phone"
+            android:inputType="number"
+            android:padding="13dp"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/colorSecondaryText" />
+
+        <!-- Login Button -->
+
+        <LinearLayout
+            android:id="@+id/bottom_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelinfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="إلــغــاء"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="10.80dp"
+                android:layout_marginRight="5.20dp"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/saveinfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.80dp"
+                android:layout_weight="1"
+                android:text="حــفــظ"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="5.20dp"
+                android:background="@color/wifacolor2"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

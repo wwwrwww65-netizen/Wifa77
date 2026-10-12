@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/Linearlay_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/scroll_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:id="@+id/homeinfo_layer1"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/wifiname_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity=""
+                        android:padding="5.20dp"
+                        android:background="@color/wifacolor"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/vt_wifiname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:text="Balance Transfer"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:id="@+id/line_wifiname"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.80dp"
+                    android:layout_marginTop="0.00dp"
+                    android:layout_marginBottom="15.00dp"
+                    android:background="@color/wifacolor"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="13.60dp"
+                    android:paddingRight="13.60dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:id="@+id/tx_1"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10.00dp"
+                        android:textColor="@color/input_login_hint"
+                        android:text="You can transfer only time and download"/>
+                    <LinearLayout
+                        android:id="@+id/Linearlay_loading"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+                        <pl.droidsonroids.gif.GifTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:background="@drawable/loading_blue"
+                            android:id="@+id/image_loading" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dataform"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:text="Time :"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"/>
+                            <EditText
+                                android:id="@+id/ed_uptime"
+                                android:layout_width="0dp"
+                                android:layout_height="38dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/custom_spinner_background"
+                                android:layout_alignParentRight="true"
+                                android:hint="Time"
+                                android:padding="10dp"
+                                android:inputType="number"
+                                android:text="0"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/input_register"
+                                android:textColorHint="@color/colorSecondaryText" />
+                            <Spinner
+                                android:spinnerMode="dropdown"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:id="@+id/spinner"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/custom_spinner_background"
+                                android:layout_width="0dp"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/lay_upload"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:textSize="16sp"
+                                android:text="Upload Mb :"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"/>
+                            <EditText
+                                android:id="@+id/ed_upload"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="2"
+                                android:layout_marginRight="10dp"
+                                android:padding="10dp"
+                                android:background="@drawable/custom_spinner_background"
+                                android:layout_alignParentRight="true"
+                                android:hint="Upload"
+                                android:text="0"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/input_register"
+                                android:textColorHint="@color/colorSecondaryText" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/lay_download"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:textSize="16sp"
+                                android:text="Download Mb :"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"/>
+                            <EditText
+                                android:id="@+id/ed_download"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="2"
+                                android:layout_marginRight="10dp"
+                                android:padding="10dp"
+                                android:background="@drawable/custom_spinner_background"
+                                android:layout_alignParentRight="true"
+                                android:hint="download"
+                                android:text="0"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/input_register"
+                                android:textColorHint="@color/colorSecondaryText" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/lay_transfer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:textSize="16sp"
+                                android:text="Transfer Mb :"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"/>
+                            <EditText
+                                android:id="@+id/ed_transfer"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="2"
+                                android:layout_marginRight="10dp"
+                                android:padding="10dp"
+                                android:background="@drawable/custom_spinner_background"
+                                android:layout_alignParentRight="true"
+                                android:hint="Transfer"
+                                android:text="0"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/input_register"
+                                android:textColorHint="@color/colorSecondaryText" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="3"
+                                android:textSize="16sp"
+                                android:text="Recipient Secret Number :"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"/>
+                            <EditText
+                                android:id="@+id/ed_recivercode"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="2"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="10dp"
+                                android:background="@drawable/custom_spinner_background"
+                                android:layout_alignParentRight="true"
+                                android:hint="Secret Number"
+                                android:inputType="number"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/input_register"
+                                android:textColorHint="@color/colorSecondaryText" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Login Button -->
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bottom_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19.20dp"
+                    android:layout_marginRight="19.20dp"
+                    android:layout_marginTop="19.20dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_ok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="5.20dp"
+                        android:layout_weight="1"
+                        android:background="@color/wifacolor2"
+                        android:text="Transfer"
+                        android:textColor="@color/colorWhite" />
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10.80dp"
+                        android:layout_marginLeft="5.20dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:text="Exit"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

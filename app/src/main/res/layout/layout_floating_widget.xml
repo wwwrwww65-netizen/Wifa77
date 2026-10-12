@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <RelativeLayout
+            android:id="@+id/collapse_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/collapsed_iv"
+                    android:layout_width="44dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/wifalogo3"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/close_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="45dp"
+                android:src="@drawable/error"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/expanded_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/expanded_container2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/wifacolor"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/wifaflouting"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/header_text"
+                    android:lineSpacingExtra="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:text="تـسـجـيـل الــدخـــول"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/open_activity_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="0dp"
+                    android:src="@drawable/aspect_ratio_black" />
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/error"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/wifiimg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/wifiname_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textSize="16.80dp"
+                    android:textColor="@color/quizColor"
+                    android:text=""/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Linearlay_loading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+                <pl.droidsonroids.gif.GifTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/loading_blue"
+                    android:visibility="gone"
+                    android:id="@+id/image_loading" />
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/statusconn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="13.60dp"
+                    android:paddingRight="13.60dp">
+                    <Button
+                        android:id="@+id/statinfo_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="مــتــصــل"
+                        android:visibility="gone"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="40dp"
+                        android:background="@color/wifacolor"/>
+
+                    <EditText
+                        android:id="@+id/ed_loginuser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_spinner_background"
+                        android:hint="رمز الدخول"
+                        android:layout_marginTop="10dp"
+                        android:inputType="text"
+                        android:padding="15dp"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/colorSecondaryText">
+                        <requestFocus></requestFocus>
+                    </EditText>
+                    <EditText
+                        android:id="@+id/ed_loginpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="كلمة المرور"
+                        android:background="@drawable/custom_spinner_background"
+                        android:inputType="text"
+                        android:padding="15dp"
+                        android:textColor="@color/input_register"
+                        android:textColorHint="@color/colorSecondaryText" />
+
+                    <RelativeLayout
+                        android:id="@+id/Cookielay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14sp"
+                            android:text="تسجيل دخول تلقائي عند الإتصال بالشبكة"
+                            android:textStyle="bold"
+                            android:textColor="@color/quizColor"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"/>
+
+                        <Switch
+                            android:id="@+id/Cookiecheckbox"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:layout_alignParentLeft="true"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                    <Button
+                        android:id="@+id/loginbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="تسجيل الدخـــــــول"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorIcons"/>
+                    <!-- Login Button -->
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

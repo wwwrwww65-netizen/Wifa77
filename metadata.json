@@ -1,0 +1,6 @@
+{
+  "name": "شبكة كلاود نت",
+  "description": "تطبيق شبكة كلاود نت WifaG للاتصال وإدارة الخدمات",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

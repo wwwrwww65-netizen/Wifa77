@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:layout_marginRight="40dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/tv_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_chat_you">
+            <TextView
+                android:id="@+id/tv_chat_text"
+                android:layout_toLeftOf="@id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp"
+                android:textAppearance="@style/Light" />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/clock_icon"
+                android:text="5:04pm"
+                android:textColor="@color/colorTextInfo"
+                android:textSize="12sp"
+                android:textAppearance="@style/ExtraLight"
+                android:layout_centerVertical="true"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

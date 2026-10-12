@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/wifiname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity=""
+            android:padding="5.20dp"
+            android:background="@color/wifacolor"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/vt_wifiname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="بيانات الدخول"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/line_wifiname"
+        android:layout_width="match_parent"
+        android:layout_height="0.80dp"
+        android:layout_marginTop="0.00dp"
+        android:layout_marginBottom="15.00dp"
+        android:background="@color/wifacolor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:id="@+id/tx_1"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/input_register_bg"
+            android:text="يرجى الانتظار ..."/>
+        <LinearLayout
+            android:id="@+id/Linearlay_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+            <pl.droidsonroids.gif.GifTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/loading_blue"
+                android:id="@+id/image_loading" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="13.60dp"
+            android:paddingRight="13.60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/loginform">
+                <TextView
+                    android:id="@+id/tx_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="اسم المستخدم"
+                    android:textColor="@color/input_register"
+                    android:textSize="20.60dp" />
+
+                <EditText
+                    android:id="@+id/ed_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_spinner_background"
+                    android:layout_alignParentRight="true"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:padding="13dp"
+                    android:textColor="@color/input_register"
+                    android:textColorHint="@color/colorSecondaryText" />
+
+                <TextView
+                    android:id="@+id/tx_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="كلمة المرور"
+                    android:textColor="@color/input_register"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20.60dp" />
+                <EditText
+                    android:id="@+id/ed_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_spinner_background"
+                    android:hint="Password"
+                    android:inputType="text"
+                    android:padding="13dp"
+                    android:textColor="@color/input_register"
+                    android:textColorHint="@color/colorSecondaryText" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+            <!-- Login Button -->
+
+            <LinearLayout
+                android:id="@+id/bottom_layer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="19.20dp"
+                android:layout_marginRight="19.20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="إلــغــاء"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5.20dp"
+                    android:background="@color/colorAccent"/>
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:text="حــفــظ"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginLeft="5.20dp"
+                    android:background="@color/wifacolor2"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.80dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/wifacolor2"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tx_mycode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:textSize="23.50dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/wifacolor2"
+                    android:text="0"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/tx_mycode_sec"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/input_register"
+                    android:text="الرقم السري:"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tx_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="@color/input_login_hint"
+                android:layout_marginBottom="10dp"
+                android:text="هذا الرقم السري الخاص بك ، يستخدم لخدمة تحويل الرصيد وخدمة الشحن الفوري"/>
+        </LinearLayout>
+</LinearLayout>
